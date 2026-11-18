@@ -35,11 +35,11 @@ export interface LimitDetection {
 
 /**
  * Claude Code's and Codex's own notice. One optional word, not a list of names:
- * Claude Code adds a window per model. Its multi-word spend refusals ("monthly
- * spend limit") have no window to wait for, and a context or token cap is not a
- * quota, so neither matches.
+ * Claude Code adds a window per model. The word may be hyphenated ("5-hour
+ * limit"). Its multi-word spend refusals ("monthly spend limit") have no window
+ * to wait for, and a context or token cap is not a quota, so neither matches.
  */
-const HIT_YOUR_LIMIT = /hit your (?!context |token )(?:\w+ )?limit/i;
+const HIT_YOUR_LIMIT = /hit your (?!context |token )(?:[\w-]+ )?limit/i;
 
 const STATUS_429 = /\b(?:http|status(?:[ _]code)?|error|code)\W{0,3}429\b/i;
 const STATUS_402 = /\b(?:http|status(?:[ _]code)?|error|code)\W{0,3}402\b/i;

@@ -48,6 +48,7 @@ const CLAUDE_NAMED_WINDOW_WORDINGS = [
   "You've hit your Opus limit · resets Sep 14, 5am (Europe/Minsk)",
   "You've hit your Sonnet limit · resets Sep 14, 5am (Europe/Minsk)",
   "You've hit your Fable limit · resets Sep 14, 5am (Europe/Minsk)",
+  "You've hit your 5-hour limit · resets 11am (Europe/Minsk)",
 ];
 
 const CODEX_WORDINGS = [
